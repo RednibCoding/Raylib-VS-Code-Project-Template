@@ -1,6 +1,6 @@
 # Raylib VS Code Starter Template
 
-Ready to run raylib project template for vs code.
+Ready to run raylib project template for vs code includeing ready to use raygui.
 
 ## Note
 

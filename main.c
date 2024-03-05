@@ -2,7 +2,7 @@
 
 /**
  * 
- * Raylib VS Code Starter Template
+ * Raylib (+ Raygui) VS Code Starter Template
  * 
  * This assumes that raylib has been installed to the default location with the official installer.
  * 
