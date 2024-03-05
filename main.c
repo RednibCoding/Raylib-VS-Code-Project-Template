@@ -16,16 +16,26 @@
 #define RAYGUI_IMPLEMENTATION
 #include "deps/raygui.h"
 
+// Include a dark style just to showcase how styles work
+#include "./deps/styles/style_dark.h" // raygui style: dark
+
 int main(void)
 {
+
     InitWindow(800, 450, "raylib [core] example - basic window");
+
+    // Each style comes with its own style-loading-function.
+    // Just look in the corresponding styles .h file.
+    // When no style is loaded, the default white style will be used.
+    GuiLoadStyleDark();
 
     int showMessageBox = false;
 
     while (!WindowShouldClose())
     {
         BeginDrawing();
-        ClearBackground(RAYWHITE);
+        ClearBackground(GetColor(GuiGetStyle(DEFAULT, BACKGROUND_COLOR)));
+
         DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
 
         if (GuiButton((Rectangle){.x = 300, .y = 280, .width = 200, .height = 60}, "Click Me :)"))
